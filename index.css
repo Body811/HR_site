@@ -27,7 +27,7 @@ body{
     position: relative;
     height: 60%;
     width: 80%;
-    border: 7px solid rgb(231, 14, 21);
+    border: 7px solid #ec253c;
     border-radius: 40px;
     box-shadow:40px 50px 20px rgb(121, 121, 121);
     background-image: url(index_background.png);
