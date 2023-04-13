@@ -1,61 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style/indexStyle.css" /> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style/indexStyle.css" />
     <title>Index</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-       <div class="header">
-            <div class="nav">
-                <div class="logo">Logo</div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
+      <div class="header">
+        <div class="nav">
+          <div class="logo">Logo</div>
+          <ul>
+            <li><a class="home" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </div>
-        <div class="main-content-container">
-            <div class="title">
-                Human Resources<br>Manager
-            </div>
-            <div class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium ut illo doloribus quas delectus ipsam velit cumque libero saepe, nostrum autem repella
-                t, iste nulla quaerat deserunt praesentium vel error soluta in! Velit eligendi illum magnam nobis placeat sed autem blanditiis repellendus omnis maxime ratione, fugit dolore
-                consequatur facere quibusdam, dignissimo Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.  iquam fugit magni temporibus laudantium. Exercitationem sed nobis quasi animi, sapiente, distinctio
-                accusantium dolorem corrupti molestias, mollitia debitis pariatur delectus ratione eum quod vel incidunt sit! 
-            </div>
-            <div class="btn">
-            <a href="#">Sign In</a>
-            </div>
+      </div>
+      <div class="main-content-container">
+        <div class="title">Human Resources<br />Manager</div>
+        <div class="text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+          ut illo doloribus quas delectus ipsam velit cumque libero saepe,
+          nostrum autem repella t, iste nulla quaerat deserunt praesentium vel
+          error soluta in! Velit eligendi illum magnam nobis placeat sed autem
+          blanditiis repellendus omnis maxime ratione, fugit dolore consequatur
+          facere quibusdam, dignissimo Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. iquam fugit magni temporibus laudantium. Exercitationem sed
+          nobis quasi animi, sapiente, distinctio accusantium dolorem corrupti
+          molestias, mollitia debitis pariatur delectus ratione eum quod vel
+          incidunt sit!
         </div>
-        <div class="login-form">
-            <form id = "form" action="Employee.html">
-                <div class = "login">
-                    <h1>Login</h1>
-                </div>
-                <div class = "form-group">
-                    
-                    <input id = "name" type="text" required placeholder = "Enter Your Username ">
-                </div>
-                <div class = "form-group">
-                    <input  id = "password" type="password" required placeholder = "Enter Your Password">
-                </div>
-                <div class = "login-btn">
-                    <input type="submit" value="Login">
-                </div>   
-            </form>
+        <div class="btn">
+          <a href="#">Sign In</a>
         </div>
+      </div>
+      <div class="login-form">
+        <form id="form" action="Employee.html">
+          <div class="login">
+            <h1>Login</h1>
+          </div>
+          <div class="form-group">
+            <input
+              id="name"
+              type="text"
+              required
+              placeholder="Enter Your Username "
+            />
+          </div>
+          <div class="form-group">
+            <input
+              id="password"
+              type="password"
+              required
+              placeholder="Enter Your Password"
+            />
+          </div>
+          <div class="login-btn">
+            <input type="submit" value="Login" />
+          </div>
+        </form>
+      </div>
     </div>
     <script>
-            document.querySelector(".btn").addEventListener(("click"),() =>{
-            document.querySelector(".main-content-container").style.display ='none'
-            document.querySelector(".login-form").style.display = 'block'
-        })
+      document.querySelector(".btn").addEventListener("click", () => {
+        document.querySelector(".main-content-container").style.display =
+          "none";
+        document.querySelector(".login-form").style.display = "block";
+      });
+      document.querySelector(".home").addEventListener("click", () => {
+        document.querySelector(".main-content-container").style.display =
+          "block";
+        document.querySelector(".login-form").style.display = "none";
+      });
     </script>
-</body>
+  </body>
 </html>
