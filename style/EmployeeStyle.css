@@ -1,0 +1,290 @@
+/*
+#eceef2 page background 
+#ffff main components background
+#ec253c red accents 
+#e0e5ec grey accents
+rgb(141, 13, 13) for links
+*/
+
+/* box-shadow(x-offset,y-offset,blur,spread,color)*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:focus {
+    outline: none;
+  }
+body{
+    background-color:#eceef2 ;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+}
+.button,li a{
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+    padding: 30px 5% 20px 5%;
+    border-bottom:2px solid #ffffff;
+}
+
+.dashboard{
+    color: rgb(176, 23, 23);
+}
+nav li{
+    display: inline-block;
+    padding: 0px 20px;
+    
+}
+nav li a{
+    position: relative;
+    padding: 0 5px;
+    color: rgb(176, 23, 23);
+}
+nav li a::after{
+    content: "";
+    position: absolute;
+    background-color: #ec253c;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+nav li a:hover::after,
+nav li a:focus::after{
+    width: 100%;
+}
+nav li a:hover,
+nav li a:focus {
+    color: #ec253c;
+}
+
+
+
+.container{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 0.8fr 1fr 1fr;
+    grid-template-rows: 1fr 0.8fr;
+    width: min(95%, 90rem);
+    margin-inline: auto;
+    padding-block: 2rem;   
+}
+
+/* here starts the profile container styling */
+
+.profile-box{
+    background-color: white;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-radius: 20px;
+    transition: 0.3s;
+    /* border: 2px solid #ec253c; */
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25); /*hsla = hue saturation lightness alpha */
+}
+
+.profile-header{
+    display: grid;
+    grid-template-columns: 0.5fr 6fr ;
+    gap: 10px;
+    font-size: 16px;
+    margin: 10px 10px;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e5ec;
+    
+}
+.profile-icon{
+width: 30px;
+float: left;
+}
+#name{
+    color: #ec253c;
+    font-size: 25px;
+}
+.profile-description{
+    display: grid;
+    grid-template-rows: repeat(9,1fr);
+    gap: 5px;
+    list-style: none;
+    align-items:center ;
+    min-height: 70vh;
+    margin: 15px;
+    font-size: 15px;
+
+}
+.profile-box li{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: rgb(176, 23, 23);
+    padding: 10px 0px;
+}
+.profile-box li span{
+    color: #ec253c;
+}
+
+/* here starts the vacation status container styling */
+
+.vacation-status-box{
+    background-color: white;
+    border-radius: 20px;
+    /* border: 2px solid #ec253c; */
+    /* box-shadow: 15px 15px 5px rgb(179, 178, 178); */
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
+}
+.box-header{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    margin: 15px;
+    border-bottom: 2px solid #e0e5ec;
+    color: #ec253c;
+}
+/* .table,th,td{
+    border: black solid 2px;
+    border-collapse: collapse;
+} */
+.table{
+    text-align: center;
+    width: 95%;
+    margin: 5px
+}
+.table th{
+    color: rgb(176, 23, 23);
+}
+.table td{
+    color: #ec253c;
+    padding-top: 20px;
+}
+
+/* here starts the accouncement container styling */
+
+.announcement-box{
+    position: relative;
+    /* background-color: white; */
+    border-radius: 20px;
+    /* border: 2px solid #ec253c; */
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
+    
+}
+.announcement-slider{
+    display: flex;
+    aspect-ratio: 16/14;
+    overflow-x: hidden; /* Makes the user be able to scroll on the x axis*/
+    scroll-snap-type:x mandatory; /* Makes the scrolling snaps along the x axis  */
+    scroll-behavior: smooth; /* Makes the scrolling smooth*/
+    border-radius: 17px;
+    
+}
+.announcement-slider img{
+    flex: 1 0 100%; /*flex: flex grow , flex shrink, flex bases;*/
+    scroll-snap-align: start; /* Makes the scrolling snap to the start of an image*/
+    object-fit: fill;
+    height: auto;
+    width: 20px;
+}
+.announcement-slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.announcement-slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #ec253c;
+    opacity: 0.6;
+    transition: 0.25s;
+}
+.announcement-slider-nav a:hover{
+    opacity: 1;
+}
+.vacation-form-box{
+    background-color: white;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border-radius: 20px;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
+    color: rgb(176, 23, 23);
+    
+    
+}
+.vacation-days-info{
+    text-align: center;
+}
+.vacation-days-info span{
+    color: #ec253c;
+    margin-left: 10px;
+}
+.from-to{
+    margin:20px 0 20px 0;
+}
+label{
+    margin: 0 5px 0 20px;
+}
+input{
+    border:1px solid rgb(176, 23, 23);
+    background: transparent;
+    color: #ec253c;
+    text-align: center;
+    padding: 4px 10px 4px 10px;
+}
+
+.vacation-reason-label{
+margin-left: 20px;
+display: block;
+
+}
+.vacation-reason-container{
+display: grid;
+grid-template-columns: 2fr 1fr;
+}
+#vacation-reason{
+    margin: 5px 0 0 20px;
+    padding: 10px;
+    height: 80px;
+    resize: none;
+    width: 500px;
+    border:1px solid rgb(176, 23, 23);
+    color: #ec253c;
+    text-align: center;
+    font-size: 14px;
+}
+#vacation-reason::placeholder{
+    color: #ec253c9a;
+}
+.button{
+    width: 160px;
+    height: 60px;
+    align-self: center;
+    margin-top: 10px;
+    padding: 9px 25px;
+    background-color: rgb(176, 23, 23);
+    text-align: center;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #ffff;
+}
+.button:hover,
+.button:focus,
+.button:active{
+ background-color: #ec253c;
+}

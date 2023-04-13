@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/EmployeeStyle.css" /> 
+    <title>Employee</title>
+</head>
+<body>
+    <header>
+        <div class="dashboard">Employee-Page</div>
+        <nav>
+            <ul>
+                <li> <a href="#">About</a></li>
+                <li> <a href="#">Service</a></li>
+                <li> <a href="#">Contact</a></li>
+
+            </ul>
+        </nav>
+        <!-- <button class="button">Apply for Vacation</button> -->
+    </header>
+    <div class="container">
+        <div class="profile-box">
+            <div class="profile-header"> <i><img class="profile-icon" src="images/user-icon.png" alt=""></i><span id="name">Name</span></div>
+            <div>
+                <ul class="profile-description">
+                    <li>job: <span id="job">Employee</span></li>
+                    <li>ID: <span id="id">2021539</span></li>
+                    <li>Email: <span id="email">template@gmail.com</span></li>
+                    <li>Address: <span id="address">123 anything street</span></li>
+                    <li>Phone Number: <span id="phone-number">0547892315</span></li>
+                    <li>Gender: <span id="gender">Male</span></li>
+                    <li>Marital Status: <span id="marital-status">Single</span></li>
+                    <li>Salary: <span id="salary">6000$</span></li>
+                    <li>Date of Birth: <span id="date-of-birth">10/2/2021</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="vacation-status-box">
+            <div class="box-header">
+                
+                Vacations Status
+            </div>
+            <div>
+                <table class="table">
+                    <tr>
+                        <th>from</th>
+                        <th>to</th>
+                        <th>Days</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>6/10</td>
+                        <td>9/10</td>
+                        <td>3</td>
+                        <td>Approved</td>
+                    </tr>
+                    <tr>
+                        <td>10/11</td>
+                        <td>12/11</td>
+                        <td>2</td>
+                        <td>Rejected</td>
+                    </tr>
+                    <tr>
+                        <td>1/12</td>
+                        <td>5/12</td>
+                        <td>5</td>
+                        <td>Pending</td>
+                    </tr>
+        
+                </table>
+            </div>
+        </div>
+        <div class="announcement-box">
+            <div class="announcement-slider">
+                <img id="slide-1" src="images/Cartoon tiny managers with giant loudspeaker and laptop.jpg" alt="">
+                <img id="slide-2" src="images/announcement3.jpg" alt="">
+                <img id="slide-3" src="images/image3.jpg" alt="">
+                <img id="slide-4" src="images/image4.jpg" alt="">
+            </div>
+            <div class="announcement-slider-nav">
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+                <a href="#slide-4"></a>
+            </div>
+        </div>
+        <div class="vacation-form-box">
+            <div class="box-header">
+                Vacation Application Form
+            </div>
+            <div>
+            <div class="vacation-days-info">
+                Available Vacation days:<span id="available-vacation-days">30</span>&emsp;&emsp;&emsp;&emsp;&emsp;
+                Approved Vacation days:<span id="approved-vacation-days">5</span></divclass>
+            </div>
+            <form class="form" action="">
+                <div class="from-to">
+                    <label for="from">From</label>   
+                    <input type="date" name="from" id="date" placeholder="From">
+                    <label for="to">To</label>
+                    <input type="date" name="to" id="date" placeholder="To">
+                </div>
+                <div class="vacation-reason-container">
+                    <div>
+                            <label class="vacation-reason-label" for="vacation-reason">Reason</label>
+                            <textarea name="vacation-reason" id="vacation-reason" placeholder="Write Your Reason for Taking This Vacation"></textarea>
+                    </div>
+                    <input class="button"type="button" value="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

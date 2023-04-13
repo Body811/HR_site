@@ -1,0 +1,245 @@
+/*
+#eceef2 page background 
+#ffff main components background
+#ec253c red accents 
+#e0e5ec grey accents
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+:focus {
+  outline: none;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #eceef2;
+
+  font-weight: 500;
+  font-size: 16px;
+}
+.container {
+  position: relative;
+  height: 60%;
+  width: 80%;
+  border: 7px solid #ec253c;
+  border-radius: 40px;
+  box-shadow: 40px 50px 20px rgb(121, 121, 121);
+  background-image: url(index_background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.5sec;
+}
+.header {
+  margin-top: 20px;
+  margin-left: 25px;
+}
+.nav {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  width: 69%;
+  column-gap: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e5ec;
+}
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style: none;
+  text-align: right;
+}
+li {
+  padding-right: 25px;
+  padding-top: 5px;
+}
+.logo {
+  font-weight: 900;
+  font-size: 25px;
+  color: #ec253c;
+  margin-left: 25px;
+}
+li a {
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  color: rgb(176, 23, 23);
+  padding: 0 5px;
+}
+li a::after {
+  content: "";
+  position: absolute;
+  background-color: #ec253c;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+li a:hover::after,
+li a:focus::after {
+  width: 100%;
+}
+li a:hover,
+li a:focus {
+  color: #ec253c;
+}
+.main-content-container {
+  width: 40%;
+  height: auto;
+  position: absolute;
+  top: 105px;
+  left: 40px;
+  color: #ec253c;
+  visibility: hidden;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.text {
+  margin-top: 10px;
+  font-size: 12px;
+  width: auto;
+}
+.btn {
+  max-width: 180px;
+  margin-top: 5%;
+  margin-left: 25%;
+  padding: 20px;
+  background-color: #ec253c;
+  text-align: center;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition-duration: 0.3s;
+}
+.btn a {
+  color: #ffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.btn:hover,
+.btn:active,
+btn:focus {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  transform: (1.1);
+}
+
+/* login  form styling */
+
+.login-form{
+  position: absolute;
+  height: auto;
+  /* left:200px;
+  top:150px; */
+  left: 12%;
+  top: 30%;
+  color: #ec253c;
+  text-align: center;
+  
+}
+.login{
+  padding: 0px 35px 10px 35px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e5ec;
+
+}
+.form-group{
+  display: inline;
+
+}
+#name , #password{
+  margin: 20px;
+  padding: 0 10px 0 10px;
+  border: none;
+  border-bottom: 2px solid #ec253c;
+  text-align: center;
+  outline: none;
+  height: 40px;
+  color: #ec253c
+}
+#name::placeholder , #password::placeholder{
+color: #ec253c9a;
+}
+.login-btn input{
+  border: none;
+  width: 180px;
+  height: 50px;
+  margin-top: 35px;
+  color: #ffff;
+  font-weight: 700;
+  background-color: #ec253c;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition-duration: 0.3s;
+}
+.login-btn input:hover,
+.login-btn input:active,
+.login-btn input:focus {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color:#ec253c;
+  transform: scale(1.1);
+  transform: (1.1);
+}
+@media screen and (width <= 1250px) {
+  .title {
+    font-size: 35px;
+  }
+  .text {
+    font-size: 10px;
+  }
+  li a {
+    font-size: 14px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .btn {
+    max-width: 100px;
+  }
+}
+@media screen and (height<=800px) {
+  .container {
+    height: 70%;
+  }
+}
+
+/* .container{
+  container-type:inline-size;
+}
+@container(width <= 1150px) {
+  .title {
+    font-size: 30px;
+  }
+  .text {
+    font-size: 8px;
+  }
+  li a {
+    font-size: 10px;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .btn {
+    max-width: 80px;
+  }
+} */

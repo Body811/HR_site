@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>Enter your info below:</h1>
+        <form>
+            <!--the first set of input values, id, name, email-->
+            <label for="id">Id:</label>
+            <input type="text" id="id" name="id"><br><br>
+            <label for="name">Full Name:</label>
+            <input type="text" id="fullname" name="fullname"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <!--the second set of input values, address, phone number, gender-->
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address"><br><br>
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{4}"><br><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female<br><br>
+
+            <!--the marital status input value-->
+
+            <label for="marital">Marital Status:</label>
+            <input type="radio" name="marital" value="married"> married
+            <input type="radio" name="marital" value="single"> single
+            <input type="radio" name="marital" value="divorced"> divorced
+            <input type="radio" name="marital" value="widowed"> widowed<br><br>
+
+            <!--the third set of input values, number of available vacation days, number of actual approved vacation days, salary-->
+
+            <label for="availableVacationDays">Number of available vacation days:</label>
+            <input type="number" id="availablevacationdays" name="availablevacationdays"><br><br>
+            <label for="actualApprovedVDays">Number of actual approved vacation days:</label>
+            <input type="number" id="actualApprovedVDays" name="actualApprovedVDays"><br><br>
+            <label for="salary">Monthly Salary:</label>
+            <input type="text" id="salary" name="salary"><br><br>
+
+            <!--the date of birth input value-->
+
+            <label for="birth date">Date of Birth:</label>
+            <input type="date" id="birth date" name="birth date"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
