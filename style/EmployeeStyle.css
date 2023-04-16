@@ -222,8 +222,6 @@ float: left;
     border-radius: 20px;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
     color: rgb(176, 23, 23);
-    
-    
 }
 .vacation-days-info{
     text-align: center;
@@ -239,13 +237,13 @@ label{
     margin: 0 5px 0 20px;
 }
 input{
-    border:1px solid rgb(176, 23, 23);
+    border:2px solid rgb(176, 23, 23);
+    border-radius: 15px;
     background: transparent;
     color: #ec253c;
     text-align: center;
     padding: 4px 10px 4px 10px;
 }
-
 .vacation-reason-label{
 margin-left: 20px;
 display: block;
@@ -254,6 +252,9 @@ display: block;
 .vacation-reason-container{
 display: grid;
 grid-template-columns: 2fr 1fr;
+/* justify-content: center; */
+/* text-align: center; */
+/* align-content: center; */
 }
 #vacation-reason{
     margin: 5px 0 0 20px;
@@ -261,10 +262,11 @@ grid-template-columns: 2fr 1fr;
     height: 80px;
     resize: none;
     width: 500px;
-    border:1px solid rgb(176, 23, 23);
+    border:2px solid rgb(176, 23, 23);
     color: #ec253c;
     text-align: center;
     font-size: 14px;
+    border-radius: 30px;
 }
 #vacation-reason::placeholder{
     color: #ec253c9a;
